@@ -153,6 +153,24 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		E55F6B231D59F88E000607BA /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				E560CE4B1D5894240038B273 /* AppDelegate.h */,
+				E560CE4C1D5894240038B273 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		E55F6B241D59F896000607BA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E560CE4E1D5894240038B273 /* ViewController.h */,
+				E560CE4F1D5894240038B273 /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		E560CE3C1D5894240038B273 = {
 			isa = PBXGroup;
 			children = (
@@ -182,10 +200,8 @@
 				E55F6B1A1D59BB48000607BA /* Presenter */,
 				E55F6B181D59BAC9000607BA /* Views */,
 				E55F6B161D59B914000607BA /* GoogleService-Info.plist */,
-				E560CE4B1D5894240038B273 /* AppDelegate.h */,
-				E560CE4C1D5894240038B273 /* AppDelegate.m */,
-				E560CE4E1D5894240038B273 /* ViewController.h */,
-				E560CE4F1D5894240038B273 /* ViewController.m */,
+				E55F6B231D59F88E000607BA /* AppDelegate */,
+				E55F6B241D59F896000607BA /* Controllers */,
 				E560CE511D5894240038B273 /* Main.storyboard */,
 				E560CE541D5894240038B273 /* Assets.xcassets */,
 				E560CE561D5894240038B273 /* LaunchScreen.storyboard */,
