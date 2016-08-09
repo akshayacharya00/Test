@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Google/Analytics.h>
+#import "IDisplayStack.h"
+#import "StackListPresenter.h"
+#import "IStackRepo.h"
+#import "StackModelRepo.h"
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController<UITableViewDelegate, UITableViewDelegate, IDisplayStack>
+@property (weak, nonatomic) IBOutlet UITableView *stackTableView;
+@property (strong, nonatomic) NSMutableArray *stackData;
 
 @end
 
