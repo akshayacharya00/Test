@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "IStackRepo.h"
 #import "IDisplayStack.h"
+#import "ViewController.h"
 
 @protocol IStackRepo;
 @protocol IDisplayStack;

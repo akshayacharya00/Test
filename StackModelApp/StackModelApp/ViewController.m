@@ -21,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.navigationItem.title = @"Stack Model";
     //add nav bar buttons
     [self addButtonsToNavBar];
     //delegate dependency injection
@@ -68,12 +69,26 @@
 
 - (void)pushItemToStack:(id)sender{
     NSLog(@"Push item to stack");
-    [presenter displayStackView:_stackData WithAction:@"Push"];
+    [presenter displayStackView:_stackData WithAction:kPUSH];
 }
 
 - (void)popItemFromStack:(id)sender{
     NSLog(@"Pop item from stack");
-    [presenter displayStackView:_stackData WithAction:@"Pop"];
+    //pop item only if count is more than zero
+    if(_stackData.count>0)
+        [presenter displayStackView:_stackData WithAction:kPOP];
+    else{
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"There are no items in stack to pop!" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *okAction = [UIAlertAction
+                                   actionWithTitle:@"Ok"
+                                   style:UIAlertActionStyleDefault
+                                   handler:^(UIAlertAction *action)
+                                   {
+                                       NSLog(@"Dismiss alert");
+                                   }];
+        [alertController addAction:okAction];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
 }
 
 - (StackListPresenter *)delegateDependencyInjection{
@@ -83,9 +98,18 @@
 }
 
 #pragma IDisplayStack protocol methods
--(void)displayStack:(NSMutableArray *)data{
-    _stackData = data;
-    [_stackTableView reloadData];
+- (void)displayStack:(NSMutableArray *)data WithAction:(NSString *)action{
+    //push operation
+    if([action isEqualToString:kPUSH])
+    {
+        _stackData = data;
+        [_stackTableView insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:(int)data.count-1 inSection:0]] withRowAnimation:UITableViewRowAnimationLeft];
+    }
+    //pop operation
+    else if([action isEqualToString:kPOP]){
+        _stackData = data;
+        [_stackTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:(int)data.count inSection:0]] withRowAnimation:UITableViewRowAnimationRight];
+    }
 }
 
 @end

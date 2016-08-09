@@ -21,12 +21,12 @@
 - (void)displayStackView:(NSMutableArray *)data WithAction:(NSString *)action{
     NSMutableArray *stackData = [NSMutableArray array];
         //if action is push
-        if([action isEqualToString:@"Push"])
+        if([action isEqualToString:kPUSH])
             stackData = [_stackRepo pushItemToStackAndRetrieve:data];
         //if action is pop
-        else if([action isEqualToString:@"Pop"])
+        else if([action isEqualToString:kPOP])
             stackData = [_stackRepo popItemToStackAndRetrieve:data];
-    [_displayStackView displayStack:stackData];
+    [_displayStackView displayStack:stackData WithAction:action];
 }
 
 @end

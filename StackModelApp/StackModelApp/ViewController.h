@@ -12,6 +12,8 @@
 #import "StackListPresenter.h"
 #import "IStackRepo.h"
 #import "StackModelRepo.h"
+#define kPUSH @"Push"
+#define kPOP @"Pop"
 
 @interface ViewController : UIViewController<UITableViewDelegate, UITableViewDelegate, IDisplayStack>
 @property (weak, nonatomic) IBOutlet UITableView *stackTableView;

@@ -9,6 +9,6 @@
 @protocol IDisplayStack <NSObject>
 
 @required
-- (void)displayStack:(NSMutableArray *)data;
+- (void)displayStack:(NSMutableArray *)data WithAction:(NSString *)action;
 
 @end
