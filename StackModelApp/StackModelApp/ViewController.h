@@ -15,7 +15,7 @@
 #define kPUSH @"Push"
 #define kPOP @"Pop"
 
-@interface ViewController : UIViewController<UITableViewDelegate, UITableViewDelegate, IDisplayStack>
+@interface ViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, IDisplayStack>
 @property (weak, nonatomic) IBOutlet UITableView *stackTableView;
 @property (strong, nonatomic) NSMutableArray *stackData;
 
