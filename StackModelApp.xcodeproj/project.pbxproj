@@ -270,6 +270,7 @@
 				E560CE5C1D5894250038B273 /* Resources */,
 				3D50D5A947BC530CC62B3EEB /* [CP] Embed Pods Frameworks */,
 				7A9B0A373B4AE72D36339F55 /* [CP] Copy Pods Resources */,
+				E55A78231D5B600100796336 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -476,6 +477,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StackModelApp/Pods-StackModelApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		E55A78231D5B600100796336 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"$RUN_UNIT_TEST_WITH_IOS_SIM\" = \"YES\" ]; then\ntest_bundle_path=\"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.$WRAPPER_EXTENSION\"\nios-sim launch \"$(dirname \"$TEST_HOST\")\" --setenv DYLD_INSERT_LIBRARIES=/../../Library/PrivateFrameworks/IDEBundleInjection.framework/IDEBundleInjection --setenv XCInjectBundle=\"$test_bundle_path\" --setenv XCInjectBundleInto=\"$TEST_HOST\" --args -SenTest All \"$test_bundle_path\"\necho \"Finished running tests with ios-sim\"\nelse\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\nfi";
 		};
 		FBE0C99B1D75B649FBD7E59E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
