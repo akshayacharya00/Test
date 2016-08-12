@@ -21,6 +21,17 @@
 		E560CE581D5894240038B273 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E560CE561D5894240038B273 /* LaunchScreen.storyboard */; };
 		E560CE631D5894250038B273 /* StackModelAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E560CE621D5894250038B273 /* StackModelAppTests.m */; };
 		E560CE6E1D5894250038B273 /* StackModelAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E560CE6D1D5894250038B273 /* StackModelAppUITests.m */; };
+		E5E21F5F1D5DB6D90078C22F /* StackModelRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F6B1E1D59BFB1000607BA /* StackModelRepo.m */; };
+		E5E21F601D5DB6D90078C22F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E560CE4F1D5894240038B273 /* ViewController.m */; };
+		E5E21F611D5DB6D90078C22F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E560CE4C1D5894240038B273 /* AppDelegate.m */; };
+		E5E21F621D5DB6D90078C22F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E560CE491D5894240038B273 /* main.m */; };
+		E5E21F631D5DB6D90078C22F /* StackListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F6B211D59C525000607BA /* StackListPresenter.m */; };
+		E5E21F651D5DB6D90078C22F /* libPods-StackModelApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1086A1B5492D8699AEA228 /* libPods-StackModelApp.a */; };
+		E5E21F671D5DB6D90078C22F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E560CE561D5894240038B273 /* LaunchScreen.storyboard */; };
+		E5E21F681D5DB6D90078C22F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E55F6B161D59B914000607BA /* GoogleService-Info.plist */; };
+		E5E21F691D5DB6D90078C22F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E560CE541D5894240038B273 /* Assets.xcassets */; };
+		E5E21F6A1D5DB6D90078C22F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E560CE511D5894240038B273 /* Main.storyboard */; };
+		E5E21F741D5DB7970078C22F /* calabash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E21F721D5DB7920078C22F /* calabash.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +84,8 @@
 		E560CE691D5894250038B273 /* StackModelAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackModelAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E560CE6D1D5894250038B273 /* StackModelAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackModelAppUITests.m; sourceTree = "<group>"; };
 		E560CE6F1D5894250038B273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5E21F701D5DB6D90078C22F /* StackModelApp-cal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StackModelApp-cal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E21F721D5DB7920078C22F /* calabash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = calabash.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +110,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F0D999ABD3AC439E125EA89 /* libPods-StackModelAppUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5E21F641D5DB6D90078C22F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5E21F651D5DB6D90078C22F /* libPods-StackModelApp.a in Frameworks */,
+				E5E21F741D5DB7970078C22F /* calabash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +196,7 @@
 		E560CE3C1D5894240038B273 = {
 			isa = PBXGroup;
 			children = (
+				E5E21F721D5DB7920078C22F /* calabash.framework */,
 				E560CE471D5894240038B273 /* StackModelApp */,
 				E560CE611D5894250038B273 /* StackModelAppTests */,
 				E560CE6C1D5894250038B273 /* StackModelAppUITests */,
@@ -189,6 +212,7 @@
 				E560CE451D5894240038B273 /* StackModelApp.app */,
 				E560CE5E1D5894250038B273 /* StackModelAppTests.xctest */,
 				E560CE691D5894250038B273 /* StackModelAppUITests.xctest */,
+				E5E21F701D5DB6D90078C22F /* StackModelApp-cal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -302,6 +326,26 @@
 			productReference = E560CE691D5894250038B273 /* StackModelAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E5E21F5C1D5DB6D90078C22F /* StackModelApp-cal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5E21F6D1D5DB6D90078C22F /* Build configuration list for PBXNativeTarget "StackModelApp-cal" */;
+			buildPhases = (
+				E5E21F5D1D5DB6D90078C22F /* [CP] Check Pods Manifest.lock */,
+				E5E21F5E1D5DB6D90078C22F /* Sources */,
+				E5E21F641D5DB6D90078C22F /* Frameworks */,
+				E5E21F661D5DB6D90078C22F /* Resources */,
+				E5E21F6B1D5DB6D90078C22F /* [CP] Embed Pods Frameworks */,
+				E5E21F6C1D5DB6D90078C22F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StackModelApp-cal";
+			productName = StackModelApp;
+			productReference = E5E21F701D5DB6D90078C22F /* StackModelApp-cal.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -340,6 +384,7 @@
 				E560CE441D5894240038B273 /* StackModelApp */,
 				E560CE5D1D5894250038B273 /* StackModelAppTests */,
 				E560CE681D5894250038B273 /* StackModelAppUITests */,
+				E5E21F5C1D5DB6D90078C22F /* StackModelApp-cal */,
 			);
 		};
 /* End PBXProject section */
@@ -367,6 +412,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5E21F661D5DB6D90078C22F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5E21F671D5DB6D90078C22F /* LaunchScreen.storyboard in Resources */,
+				E5E21F681D5DB6D90078C22F /* GoogleService-Info.plist in Resources */,
+				E5E21F691D5DB6D90078C22F /* Assets.xcassets in Resources */,
+				E5E21F6A1D5DB6D90078C22F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +548,51 @@
 			shellPath = /bin/sh;
 			shellScript = "if [ \"$RUN_UNIT_TEST_WITH_IOS_SIM\" = \"YES\" ]; then\ntest_bundle_path=\"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.$WRAPPER_EXTENSION\"\nios-sim launch \"$(dirname \"$TEST_HOST\")\" --setenv DYLD_INSERT_LIBRARIES=/../../Library/PrivateFrameworks/IDEBundleInjection.framework/IDEBundleInjection --setenv XCInjectBundle=\"$test_bundle_path\" --setenv XCInjectBundleInto=\"$TEST_HOST\" --args -SenTest All \"$test_bundle_path\"\necho \"Finished running tests with ios-sim\"\nelse\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\nfi";
 		};
+		E5E21F5D1D5DB6D90078C22F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E5E21F6B1D5DB6D90078C22F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StackModelApp/Pods-StackModelApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5E21F6C1D5DB6D90078C22F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StackModelApp/Pods-StackModelApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FBE0C99B1D75B649FBD7E59E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -535,6 +636,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E560CE6E1D5894250038B273 /* StackModelAppUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5E21F5E1D5DB6D90078C22F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5E21F5F1D5DB6D90078C22F /* StackModelRepo.m in Sources */,
+				E5E21F601D5DB6D90078C22F /* ViewController.m in Sources */,
+				E5E21F611D5DB6D90078C22F /* AppDelegate.m in Sources */,
+				E5E21F621D5DB6D90078C22F /* main.m in Sources */,
+				E5E21F631D5DB6D90078C22F /* StackListPresenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,6 +775,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Manisha Rao (KFN7CVSBEZ)";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = StackModelApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.capgemini.praxair.StackModelApp;
@@ -677,6 +794,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Manisha Rao (KFN7CVSBEZ)";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = StackModelApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.capgemini.praxair.StackModelApp;
@@ -735,6 +856,144 @@
 			};
 			name = Release;
 		};
+		E5E21F6E1D5DB6D90078C22F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61C6DC949041B837C3C3EDC6 /* Pods-StackModelApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Manisha Rao (KFN7CVSBEZ)";
+				CODE_SIGN_RESOURCE_RULES_PATH = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"GoogleAnalytics\"",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"stdc++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AdSupport\"",
+					"-framework",
+					"\"AddressBook\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreMotion\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"GGLAnalytics\"",
+					"-framework",
+					"\"GGLCore\"",
+					"-framework",
+					"\"GoogleInterchangeUtilities\"",
+					"-framework",
+					"\"GoogleSymbolUtilities\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-force_load",
+					"\"$(SRCROOT)/calabash.framework/calabash\"",
+					"-lstdc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.capgemini.praxair.StackModelApp.cal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "59dd9051-e004-42de-8b25-3901ddb68213";
+			};
+			name = Debug;
+		};
+		E5E21F6F1D5DB6D90078C22F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B64A89691A7D4D21FD9E834D /* Pods-StackModelApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Manisha Rao (KFN7CVSBEZ)";
+				CODE_SIGN_RESOURCE_RULES_PATH = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"GoogleAnalytics\"",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"stdc++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AdSupport\"",
+					"-framework",
+					"\"AddressBook\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreMotion\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"GGLAnalytics\"",
+					"-framework",
+					"\"GGLCore\"",
+					"-framework",
+					"\"GoogleInterchangeUtilities\"",
+					"-framework",
+					"\"GoogleSymbolUtilities\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-force_load",
+					"\"$(SRCROOT)/calabash.framework/calabash\"",
+					"-lstdc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.capgemini.praxair.StackModelApp.cal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "59dd9051-e004-42de-8b25-3901ddb68213";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -770,6 +1029,15 @@
 			buildConfigurations = (
 				E560CE791D5894250038B273 /* Debug */,
 				E560CE7A1D5894250038B273 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5E21F6D1D5DB6D90078C22F /* Build configuration list for PBXNativeTarget "StackModelApp-cal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5E21F6E1D5DB6D90078C22F /* Debug */,
+				E5E21F6F1D5DB6D90078C22F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

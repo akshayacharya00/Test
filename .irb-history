@@ -1,0 +1,28 @@
+ids
+start_test_server_in_background
+ids
+ids
+calabash_exit
+start_test_server_in_background
+ids
+calabash_exit
+cucumber -v
+calabash_exit
+start_test_server_in_background
+ids
+touch("*id:'minus'")
+touch(ids[0])
+query("* id")
+query("*id")
+query("id:minus")
+query("all button")
+query("label marked:'minus'")
+labels
+irb
+query("UINavigationButton")
+query("UINavigationButton",label)
+query("UINavigationButton label")
+query("UINavigationButton marked:'minus'")
+touch("UINavigationButton marked:'minus'")
+touch("UINavigationButton marked:'add'")
+touch("UINavigationButton marked:'plus'")

@@ -63,7 +63,7 @@
 
 #pragma Custom methods
 - (void)addButtonsToNavBar{
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(pushItemToStack:)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"plus"] style:UIBarButtonItemStylePlain target:self action:@selector(pushItemToStack:)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"minus"] style:UIBarButtonItemStylePlain target:self action:@selector(popItemFromStack:)];
 }
 
